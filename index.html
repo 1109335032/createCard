@@ -129,11 +129,13 @@
                     text: '这篇文章真的很有启发，值得一看！', // 分享的文本描述
                     url: `https://1109335032.github.io/cyj?title=${name}(${profession})` // 当前页面的链接
                 });
-                console.log('分享成功！');
+                alert('分享成功！')
             } catch (error) {
                 // 如果用户取消分享，或者发生其他错误，会在这里捕获
                 if (error.name !== 'AbortError') {
                     console.error('分享失败了:', error);
+
+                    alert('分享失败了:', error)
                 }
             }
         }
